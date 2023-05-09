@@ -24,10 +24,10 @@ org="${INPUT_ORG:-${FLY_ORG:-personal}}"
 image="$INPUT_IMAGE"
 config="$INPUT_CONFIG"
 
-if ! echo "$app" | grep "$PR_NUMBER"; then
-  echo "For safety, this action requires the app's name to contain the PR number."
-  exit 1
-fi
+# if ! echo "$app" | grep "$PR_NUMBER"; then
+#   echo "For safety, this action requires the app's name to contain the PR number."
+#   exit 1
+# fi
 
 # PR was closed - remove the Fly app if one exists and exit.
 if [ "$EVENT_TYPE" = "closed" ]; then
